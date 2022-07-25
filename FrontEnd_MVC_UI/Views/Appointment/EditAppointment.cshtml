@@ -1,0 +1,65 @@
+﻿@model FrontEnd_MVC_UI.Models.Appointment
+
+@{
+    ViewData["Title"] = "EditAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Edit Visit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditAppointment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                    <label asp-for="Appoint_Id" class="control-label"></label>
+                    <input asp-for="Appoint_Id" class="form-control" />
+                    <span asp-validation-for="Appoint_Id" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="CompanyName"  class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control"  />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TerminalName" class="control-label"></label>
+                <input asp-for="TerminalName" class="form-control"  />
+                <span asp-validation-for="TerminalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromDate" class="control-label"></label>
+                <input asp-for="FromDate" class="form-control" />
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDate" class="control-label"></label>
+                <input asp-for="ToDate" class="form-control" />
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Slots" class="control-label">Slots Number</label>
+                <input asp-for="Slots" class="form-control" />
+                <span asp-validation-for="Slots" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SlotsRefrenceNo" class="control-label"></label>
+                <input asp-for="SlotsRefrenceNo" class="form-control" />
+                <span asp-validation-for="SlotsRefrenceNo" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAppointmentList">Back to List</a>
+</div>
+

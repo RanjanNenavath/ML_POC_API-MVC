@@ -1,0 +1,81 @@
+﻿@model FrontEnd_MVC_UI.Models.Appointment
+
+@{
+    ViewData["Title"] = "DeleteAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Delete Visit</h3>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        @*<dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Appoint_Id)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Appoint_Id)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Terminal_Id)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Terminal_Id)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Company_Id)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Company_Id)
+            </dd>*@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TerminalName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TerminalName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Slots)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Slots)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SlotsRefrenceNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SlotsRefrenceNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+    </dl>
+
+    <form asp-action="DeleteAppointment">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="GetAppointmentList">Back to List</a>
+    </form>
+</div>

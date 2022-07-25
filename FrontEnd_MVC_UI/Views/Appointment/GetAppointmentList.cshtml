@@ -1,0 +1,92 @@
+﻿@model IEnumerable<FrontEnd_MVC_UI.Models.Appointment>
+
+@{
+    ViewData["Title"] = "GetAppointmentList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Appointment List</h3>
+
+<p>
+    <a asp-action="CreateAppointment" asp-controller="Appointment">Add Visit</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Appoint_Id)
+                </th>
+                <th> 
+                    @Html.DisplayNameFor(model => model.Terminal_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Company_Id)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TerminalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slots)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlotsRefrenceNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Appoint_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Terminal_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Company_Id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TerminalName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FromDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slots)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SlotsRefrenceNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditAppointment", new { id = item.Appoint_Id }) |
+                    @Html.ActionLink("Detail", "DetailAppointment", new { id = item.Appoint_Id }) |
+                    @Html.ActionLink("Delete", "DeleteAppointment", new { id = item.Appoint_Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

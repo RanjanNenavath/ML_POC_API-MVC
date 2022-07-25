@@ -1,0 +1,62 @@
+﻿@model FrontEnd_MVC_UI.Models.Appointment
+
+@{
+    ViewData["Title"] = "DetailAppointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DetailAppointment</h1>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TerminalName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TerminalName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Slots)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Slots)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SlotsRefrenceNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SlotsRefrenceNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "EditAppointment", new {  id = Model.Appoint_Id }) |
+    <a asp-action="GetAppointmentList">Back to List</a>
+</div>
